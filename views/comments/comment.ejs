@@ -1,0 +1,36 @@
+<%- include('../template/header') %>
+
+<%- include('../template/navBar') %>
+
+<body>
+    <div class="container " style=" width: 37%; ">
+        <h1 style="padding: 3%;"> write your comment here</h1>
+    </div>
+    <div class="container " style=" width:50%; padding: 3%; ">
+        <div>
+            <form action="/comment" method="POST">
+                <textarea type="text" class=" col-12 border border-info" cols="40" rows="10" name="comment"id="comment"
+                ><% if ( errors && errors.commentsError && errors.commentsError !== ""){%>
+                    <%= errors.commentsError %>
+                <%}%></textarea>
+                <div class="container" style=" padding: 1rem; padding-left: 0%;">
+                    <div class="row">
+                        <div class="col-1">
+                            <input type="submit" class="btn btn-outline-info btn-sm" value="Save" />
+                        </div>
+                        <div class="col-1" style="margin-left: 2rem;">
+                            <input type="reset" class="btn btn-outline-info btn-sm" value="Reset" />
+                        </div>
+                        <div class="col-1" style="margin-left:2rem;">
+                            <a href="/welcome" class="btn btn-outline-info btn-sm" role="button" value="back">Back
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

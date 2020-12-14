@@ -1,0 +1,12 @@
+runtime: nodejs10
+service: simple-account
+
+automatic_scaling:
+  max_instances : 2
+  max_concurrent_requests: 50
+
+env_variables:
+  SECRET : "OSlJHoT3/q8G2J5+bBBaIQ=="
+  MONGO_DB_HOST : "mongodb+srv://root:JFNRN@cluster0.rz0bx.mongodb.net/user?retryWrites=true&w=majority"
+  ROOT_URL : "https://simple-account-dot-ferrous-marking-296519.uc.r.appspot.com"
+  

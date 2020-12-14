@@ -1,0 +1,34 @@
+<%- include('../template/header') %>
+
+<%- include('../template/navBar') %>
+
+<body>
+    <h1 style="padding-top: 3%; padding-left: 30%;"> Here is all of your comments </h1>
+    <div class="container " style="padding: 3rem; margin: auto;" >
+        <div class=" col-10 border border-info" style="padding: 3rem; margin: auto;">
+            <% for (let comment of user.comments ) {%>
+            <br>
+            <p> <%= comment.comment %></p>
+            <div class="row" style="padding-top: 1rem;">
+                <div class="col-1">
+                    <a href="editComment/<%=comment._id %>" class="btn btn-outline-info btn-sm"  role="button" value="">Edit
+                    </a>
+                </div>
+
+                <div class="col-1">
+                    <a href="/deleteComment/<%=comment._id %>" class="btn btn-outline-info btn-sm"  role="button" value="">Delete
+                    </a>
+                </div>
+
+            </div>
+            <%}%>
+        </div>
+        <div class="col-1" style="padding-top: 1rem; padding-left: 8%;">
+            <a href="/welcome" class="btn btn-outline-info btn-sm" role="button" value="back">back
+            </a>
+        </div>
+    </div>
+    
+</body>
+</html>
+

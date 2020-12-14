@@ -1,0 +1,33 @@
+<%- include('template/header') %>
+
+<%- include('template/navBar') %>
+<div style=" padding: 3%; ">
+    <div class="container" style="text-align: center;">
+        <h1> welcome <%if(user.firstName && user.firstName !== ""){%>
+            <%= `${user.firstName}` %>
+            <%}%>
+    </h1>
+</div>
+    <div class="container" style="padding-top: 5%; text-align: center; padding-left: 15%;">
+        <div class="row" style="padding: 10px;">
+            <div class="col-6">
+                <p>write new comment comment</p>
+            </div>
+            <div class="col-2">
+                <a href="/comment" class="btn btn-outline-info btn-sm" role="button" aria-pressed="true">click here</a>
+            </div>
+        </div>
+        <div class="row" style="padding: 10px;">
+            <div class="col-6">
+                <p>show all of your comments</p>
+            </div>
+            <div class="col-2">
+                <a href="/allComments" class="btn btn-outline-info btn-sm" role="button" value="">click
+                    here</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

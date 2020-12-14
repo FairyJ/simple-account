@@ -1,0 +1,32 @@
+<%- include('../template/header') %>
+
+<%- include('../template/navBar') %>
+
+<body>
+    <h1 style="padding-top: 3%; padding-left: 30%;"> Edit your comment here</h1>
+    <div class="container " style=" padding: 3%; ">
+        <div style="padding: 4%;">
+            <form action="/editComment" method="POST">
+                <textarea type="text" class=" col-10  border-info" cols="40" rows="10" name="comment"
+                    id="comment"><%= user.currentComment.comment %></textarea>
+                <input type="hidden" value="<%= user.currentComment._id %>" name="commentId" />
+                <div class="row">
+                    <div class="col-1">
+                        <input type="submit" class="btn btn-outline-info btn-sm" value="Save" />
+                    </div>
+                    <div class="col-1" style="margin-left: 3%;">
+                        <input type="reset" class="btn btn-outline-info btn-sm" value="Reset" />
+                    </div>
+                    <div class="col-1" style="margin-left: 3%;">
+                        <a href="/allComments" class="btn btn-outline-info btn-sm" role="button" value="back">Back
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- </div>
+    </div> -->
+</body>
+
+</html>
